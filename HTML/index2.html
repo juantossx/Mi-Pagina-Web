@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Colmillo Gourmet</title>
+    <link rel="shortcut icon" href="/RESTAURANTE/MULTIMEDIA/IMG/logo2.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
@@ -35,19 +35,21 @@
         #TTitulo_Nosotros {
             font-size: 2.5rem;
             font-weight: bold;
-            color: #dc3545;
+            color: #dc3545 !important;
             margin-bottom: 30px;
             border-bottom: 3px solid #dc3545;
             padding-bottom: 15px;
             display: inline-block;
         }
 
-        #Nosotros p:last-child {
+        .nosotros-descripcion {
             font-size: 1.1rem;
-            line-height: 1.6;
-            color: #6c757d;
+            line-height: 1.8;
+            color: #495057;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 0 auto 40px auto;
+            text-align: center;
+            font-weight: 400;
         }
 
         /* Sección Menu */
@@ -69,16 +71,157 @@
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             min-height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
-        #Gatitos::before {
-            content: "🐱 Sección de Gatitos en Adopción 🐱";
-            font-size: 2rem;
-            color: #dc3545;
+        #Gatitos h2 {
+            font-size: 2.5rem;
             font-weight: bold;
+            color: #dc3545;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #dc3545;
+            padding-bottom: 15px;
+            display: inline-block;
+        }
+
+        /* Sección Finales Felices */
+        #FinalesFelices {
+            background: white;
+            padding: 80px 20px;
+            text-align: center;
+            margin: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            min-height: 400px;
+        }
+
+        #FinalesFelices h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #dc3545;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #dc3545;
+            padding-bottom: 15px;
+            display: inline-block;
+        }
+
+        /* Estilos para cartas de gatitos */
+        .cat-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            border: 2px solid transparent;
+        }
+
+        .cat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(220, 53, 69, 0.2);
+            border-color: #dc3545;
+        }
+
+        .cat-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .cat-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #212529;
+            margin-bottom: 8px;
+        }
+
+        .cat-age {
+            color: #6c757d;
+            font-size: 1rem;
+        }
+
+        .cat-description {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        /* Estilos para cartas de adopciones exitosas */
+        .adoption-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            border: 2px solid transparent;
+        }
+
+        .adoption-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.2);
+            border-color: #dc3545;
+        }
+
+        .family-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .adoption-info {
+            text-align: left;
+        }
+
+        .family-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #212529;
+            margin-bottom: 8px;
+        }
+
+        .adoption-details {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .adoption-date {
+            color: #28a745;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        /* Estilos del carousel integrado en Nosotros */
+        .nosotros-carousel {
+            margin-top: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .carousel-caption {
+            background: rgba(0, 0, 0, 0.7) !important;
+            border-radius: 8px;
+            padding: 20px !important;
+        }
+
+        .carousel-caption h3 {
+            color: white !important;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .carousel-caption p {
+            color: white !important;
+            font-size: 1rem;
+            margin-bottom: 0;
+            opacity: 1 !important;
         }
 
         /* Estilos para el contenedor horizontal */
@@ -194,11 +337,6 @@
             background: #dc3545;
         }
 
-        /* Estilos del carousel */
-        #demo {
-            margin: 40px 0;
-        }
-
         /* Responsive */
         @media (max-width: 768px) {
             .menu-section {
@@ -217,6 +355,11 @@
             body>div[id] {
                 padding: 40px 0;
             }
+
+            .nosotros-carousel {
+                max-width: 100%;
+                margin-top: 30px;
+            }
         }
     </style>
 </head>
@@ -227,7 +370,7 @@
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">
                     <img class="img-fluid" style="height: 50px; width: 50px;"
-                        src="/RESTAURANTE/MULTIMEDIA/IMG/burger.png" alt="Logo1">
+                        src="/RESTAURANTE/MULTIMEDIA/IMG/logo2.png" alt="Logo1">
                 </a>
 
                 <!-- Botón hamburguesa para pantallas pequeñas -->
@@ -259,7 +402,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#demo" onclick="scrollToSection('demo')">
+                            <a class="nav-link" href="#FinalesFelices" onclick="scrollToSection('FinalesFelices')">
                                 <i class="fas fa-heart me-1"></i>Finales felices
                             </a>
                         </li>
@@ -269,76 +412,70 @@
         </nav>
     </header>
 
+    <!-- Sección Nosotros con Carousel integrado -->
     <div id="Nosotros">
         <p id="TTitulo_Nosotros">Colmillo Gourmet</p>
-        <p>En Colmillo Gourmet no solo servimos platos deliciosos, sino también segundas oportunidades. Somos un
+        <p class="nosotros-descripcion">En Colmillo Gourmet no solo servimos platos deliciosos, sino también segundas
+            oportunidades. Somos un
             restaurante con alma de refugio, donde cada bocado que disfrutas ayuda a darle un hogar temporal a nuestros
             chefs de cuatro patas. El 100% de nuestras ganancias se destinan a cuidar a estos pequeños gourmets peludos
             mientras esperan por una familia amorosa. Ven por la comida, quédate por los ronroneos.</p>
-    </div>
-    <div>
-        <!-- Carousel -->
-        <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
+        <!-- Carousel integrado en Nosotros -->
+        <div id="nosotrosCarousel" class="carousel slide nosotros-carousel" data-bs-ride="carousel">
             <!-- Indicadores -->
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#nosotrosCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#nosotrosCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#nosotrosCarousel" data-bs-slide-to="2"></button>
             </div>
 
-            <!-- Contenedor que limita al 50% -->
-            <div class="position-relative mx-auto" style="width: 50%;">
-
-                <!-- Slides -->
-                <div class="carousel-inner">
-                    <!-- Slide 1 -->
-                    <div class="carousel-item active">
-                        <img src="/RESTAURANTE/MULTIMEDIA/IMG/gato-1.jpg" class="d-block w-100 rounded" alt="Gato 1">
-                        <div
-                            class="position-absolute bottom-0 start-0 w-100 bg-dark bg-opacity-50 text-white text-center p-3">
-                            <h3>Aquí, los gatos son la estrella Michelin</h3>
-                            <p>Ellos inspiran nuestra cocina y llenan de ronroneos cada rincón. Conoce a nuestros chefs
-                                de bigotes.</p>
-                        </div>
-                    </div>
-
-                    <!-- Slide 2 -->
-                    <div class="carousel-item">
-                        <img src="/RESTAURANTE/MULTIMEDIA/IMG/gato-1.jpg" class="d-block w-100 rounded" alt="Gato 2">
-                        <div
-                            class="position-absolute bottom-0 start-0 w-100 bg-dark bg-opacity-50 text-white text-center p-3">
-                            <h3>Sabores con Propósito</h3>
-                            <p>Comer rico nunca tuvo tanto sentido</p>
-                        </div>
-                    </div>
-
-                    <!-- Slide 3 -->
-                    <div class="carousel-item">
-                        <img src="/RESTAURANTE/MULTIMEDIA/IMG/gato-1.jpg" class="d-block w-100 rounded" alt="Gato 3">
-                        <div
-                            class="position-absolute bottom-0 start-0 w-100 bg-dark bg-opacity-50 text-white text-center p-3">
-                            <h3>De nuestro corazón a tu hogar</h3>
-                            <p>Nuestro refugio es un puente hacia su familia definitiva. ¿Quieres ser parte de su
-                                historia?</p>
-                        </div>
+            <!-- Slides -->
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&h=400&fit=crop&crop=center"
+                        class="d-block w-100 rounded" alt="Gato 1">
+                    <div class="carousel-caption d-md-block">
+                        <h3>Aquí, los gatos son la estrella Michelin</h3>
+                        <p>Ellos inspiran nuestra cocina y llenan de ronroneos cada rincón. Conoce a nuestros chefs
+                            de bigotes.</p>
                     </div>
                 </div>
 
-                <!-- Controles globales (dentro del contenedor limitado) -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev"
-                    style="position: absolute; top: 50%; left: 0; transform: translateY(-50%); z-index: 10;">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next"
-                    style="position: absolute; top: 50%; right: 0; transform: translateY(-50%); z-index: 10;">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1478098711619-5ab0b478d6e6?w=600&h=400&fit=crop&crop=center"
+                        class="d-block w-100 rounded" alt="Gato 2">
+                    <div class="carousel-caption d-md-block">
+                        <h3>Sabores con Propósito</h3>
+                        <p>Comer rico nunca tuvo tanto sentido</p>
+                    </div>
+                </div>
 
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?w=600&h=400&fit=crop&crop=center"
+                        class="d-block w-100 rounded" alt="Gato 3">
+                    <div class="carousel-caption d-md-block">
+                        <h3>De nuestro corazón a tu hogar</h3>
+                        <p>Nuestro refugio es un puente hacia su familia definitiva. ¿Quieres ser parte de su
+                            historia?</p>
+                    </div>
+                </div>
             </div>
+
+            <!-- Controles del carousel -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#nosotrosCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#nosotrosCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
         </div>
     </div>
 
+    <!-- Sección Menú -->
     <div id="Menu">
         <!-- Título Principal del Menú -->
         <div class="text-center mb-4 bg-white py-4 rounded mx-3">
@@ -370,8 +507,6 @@
                 </button>
             </div>
         </div>
-
-
 
         <!-- Contenedor horizontal del menú -->
         <div class="menu-horizontal-container" id="menuContainer">
@@ -522,11 +657,188 @@
                 </div>
             </div>
         </div>
-
-
     </div>
 
+    <!-- Sección Gatitos en Adopción -->
     <div id="Gatitos">
+        <h2><i class="fas fa-cat me-2"></i>Gatitos en Adopción</h2>
+        <p class="lead text-muted mb-5">Estos pequeños amigos están buscando un hogar lleno de amor</p>
+
+        <div class="container">
+            <div class="row g-4">
+                <!-- Gatito 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="cat-card">
+                        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=300&h=200&fit=crop&crop=center"
+                            alt="Miau" class="cat-image">
+                        <div class="cat-name">Miau</div>
+                        <div class="cat-age">2 años</div>
+                        <div class="cat-description">
+                            Dulce y juguetón, le encanta perseguir pelotas de hilo y dormir al sol.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gatito 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="cat-card">
+                        <img src="https://images.unsplash.com/photo-1478098711619-5ab0b478d6e6?w=300&h=200&fit=crop&crop=center"
+                            alt="Luna" class="cat-image">
+                        <div class="cat-name">Luna</div>
+                        <div class="cat-age">3 años</div>
+                        <div class="cat-description">
+                            Muy cariñosa y tranquila, perfecta para familias que buscan una compañera fiel.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gatito 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="cat-card">
+                        <img src="https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?w=300&h=200&fit=crop&crop=center"
+                            alt="Simba" class="cat-image">
+                        <div class="cat-name">Simba</div>
+                        <div class="cat-age">1 año</div>
+                        <div class="cat-description">
+                            Lleno de energía y curiosidad, le fascina explorar cada rincón del hogar.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gatito 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="cat-card">
+                        <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=300&h=200&fit=crop&crop=center"
+                            alt="Bella" class="cat-image">
+                        <div class="cat-name">Bella</div>
+                        <div class="cat-age">4 años</div>
+                        <div class="cat-description">
+                            Elegante y sofisticada, disfruta de los mimos y las caricias suaves.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gatito 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="cat-card">
+                        <img src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?w=300&h=200&fit=crop&crop=center"
+                            alt="Garfield" class="cat-image">
+                        <div class="cat-name">Garfield</div>
+                        <div class="cat-age">5 años</div>
+                        <div class="cat-description">
+                            Relajado y glotón, ama la comida tanto como las siestas largas.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gatito 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="cat-card">
+                        <img src="https://images.unsplash.com/photo-1548247416-ec66f4900b2e?w=300&h=200&fit=crop&crop=center"
+                            alt="Nieve" class="cat-image">
+                        <div class="cat-name">Nieve</div>
+                        <div class="cat-age">6 meses</div>
+                        <div class="cat-description">
+                            Pequeña y adorable, busca una familia que le enseñe sobre el amor verdadero.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección Finales Felices -->
+    <div id="FinalesFelices">
+        <h2><i class="fas fa-heart me-2"></i>Finales Felices</h2>
+        <p class="lead text-muted mb-5">Historias de amor que nos llenan el corazón</p>
+
+        <div class="container">
+            <div class="row g-4">
+                <!-- Adopción 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="adoption-card">
+                        <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=300&h=180&fit=crop&crop=center"
+                            alt="Familia Rodríguez con Whiskers" class="family-image">
+                        <div class="adoption-info">
+                            <div class="family-name">Familia Rodríguez</div>
+                            <div class="adoption-details"><strong>Gatito:</strong> Whiskers</div>
+                            <div class="adoption-details"><strong>Edad:</strong> 2 años</div>
+                            <div class="adoption-date">📅 Adoptado: 15 de Marzo, 2024</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Adopción 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="adoption-card">
+                        <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=300&h=180&fit=crop&crop=center"
+                            alt="Familia García con Pelusa" class="family-image">
+                        <div class="adoption-info">
+                            <div class="family-name">Familia García</div>
+                            <div class="adoption-details"><strong>Gatito:</strong> Pelusa</div>
+                            <div class="adoption-details"><strong>Edad:</strong> 1 año</div>
+                            <div class="adoption-date">📅 Adoptado: 22 de Febrero, 2024</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Adopción 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="adoption-card">
+                        <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=300&h=180&fit=crop&crop=center"
+                            alt="Familia Martínez con Copito" class="family-image">
+                        <div class="adoption-info">
+                            <div class="family-name">Familia Martínez</div>
+                            <div class="adoption-details"><strong>Gatito:</strong> Copito</div>
+                            <div class="adoption-details"><strong>Edad:</strong> 3 años</div>
+                            <div class="adoption-date">📅 Adoptado: 8 de Enero, 2024</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Adopción 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="adoption-card">
+                        <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=300&h=180&fit=crop&crop=center"
+                            alt="Familia López con Milo" class="family-image">
+                        <div class="adoption-info">
+                            <div class="family-name">Familia López</div>
+                            <div class="adoption-details"><strong>Gatito:</strong> Milo</div>
+                            <div class="adoption-details"><strong>Edad:</strong> 4 años</div>
+                            <div class="adoption-date">📅 Adoptado: 30 de Diciembre, 2023</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Adopción 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="adoption-card">
+                        <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=300&h=180&fit=crop&crop=center"
+                            alt="Familia Jiménez con Cleo" class="family-image">
+                        <div class="adoption-info">
+                            <div class="family-name">Familia Jiménez</div>
+                            <div class="adoption-details"><strong>Gatito:</strong> Cleo</div>
+                            <div class="adoption-details"><strong>Edad:</strong> 2 años</div>
+                            <div class="adoption-date">📅 Adoptado: 18 de Noviembre, 2023</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Adopción 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="adoption-card">
+                        <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=300&h=180&fit=crop&crop=center"
+                            alt="Familia Herrera con Max" class="family-image">
+                        <div class="adoption-info">
+                            <div class="family-name">Familia Herrera</div>
+                            <div class="adoption-details"><strong>Gatito:</strong> Max</div>
+                            <div class="adoption-details"><strong>Edad:</strong> 5 años</div>
+                            <div class="adoption-date">📅 Adoptado: 5 de Octubre, 2023</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer class="bg-dark text-white py-4">
@@ -541,7 +853,7 @@
                         <img src="/RESTAURANTE/MULTIMEDIA/IMG/instagram.png" class="img-fluid"
                             style="width: 40px; height: 40px;" alt="Instagram">
                         <img src="/RESTAURANTE/MULTIMEDIA/IMG/twitter.png" class="img-fluid"
-                            style="width: 40px; height: 40px;" alt="TikTok">
+                            style="width: 40px; height: 40px;" alt="Twitter">
                     </div>
                 </div>
 
@@ -631,7 +943,7 @@
 
         // Función para actualizar navbar activo basado en scroll de la página
         function updateActiveNavItem() {
-            const sections = ['Nosotros', 'Menu', 'Gatitos', 'demo'];
+            const sections = ['Nosotros', 'Menu', 'Gatitos', 'FinalesFelices'];
             const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
             let currentSection = '';
